@@ -283,7 +283,6 @@ export default function SearchSection({ onSearch, isDarkMode = false }: SearchSe
                 <li>• اكتب الاسم الأول والثاني على الأقل</li>
                 <li>• يمكن البحث بجزء من الاسم (مثل: أحمد محمد)</li>
                 <li>• البحث يتجاهل الهمزات والمسافات الزائدة</li>
-                <li>• يمكن كتابة الاسم بأي ترتيب (مثل: محمد أحمد)</li>
               </ul>
             </div>
           </div>

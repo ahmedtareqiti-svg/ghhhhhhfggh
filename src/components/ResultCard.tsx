@@ -154,6 +154,90 @@ export const ResultCard: React.FC<ResultCardProps> = ({ student, isDarkMode = fa
         </div>
 
         {/* Success/Encouragement message */}
+        {student.grade >= 85 && (
+          <div className="bg-gradient-to-r from-emerald-500 to-green-600 text-white p-8 text-center relative overflow-hidden mb-6">
+            {/* Background decorative elements */}
+            <div className="absolute top-2 right-4 opacity-20">
+              <Trophy className="w-16 h-16 animate-bounce-slow" />
+            </div>
+            <div className="absolute bottom-2 left-4 opacity-15">
+              <Star className="w-12 h-12 animate-spin-slow" />
+            </div>
+            
+            <div className="relative z-10">
+              <div className="flex justify-center items-center gap-3 mb-6">
+                <Trophy className="w-10 h-10 text-yellow-300 animate-bounce-slow" />
+                <h3 className="text-2xl md:text-3xl font-bold text-white">
+                  🎉 دعوة خاصة للحفل 🎉
+                </h3>
+                <Trophy className="w-10 h-10 text-yellow-300 animate-bounce-slow" />
+              </div>
+              
+              <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-6 border border-white/30">
+                <h4 className="text-xl font-bold text-yellow-200 mb-4">
+                  تتشرف إدارة المسجد الشرقي بدعوتكم لحضور حفل تكريم الفائزين
+                </h4>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                  <div className="bg-white/10 rounded-xl p-4">
+                    <div className="flex items-center justify-center gap-2 mb-2">
+                      <Calendar className="w-5 h-5 text-yellow-300" />
+                      <span className="font-bold text-yellow-200">التاريخ الهجري</span>
+                    </div>
+                    <p className="text-white text-lg font-semibold">
+                      الخميس، ١٥ صفر ١٤٤٧ هـ
+                    </p>
+                  </div>
+                  
+                  <div className="bg-white/10 rounded-xl p-4">
+                    <div className="flex items-center justify-center gap-2 mb-2">
+                      <Calendar className="w-5 h-5 text-yellow-300" />
+                      <span className="font-bold text-yellow-200">التاريخ الميلادي</span>
+                    </div>
+                    <p className="text-white text-lg font-semibold">
+                      الخميس، ١١ سبتمبر ٢٠٢٥ م
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="bg-white/10 rounded-xl p-4 mb-4">
+                  <div className="flex items-center justify-center gap-2 mb-2">
+                    <Clock className="w-5 h-5 text-yellow-300 animate-tick" />
+                    <span className="font-bold text-yellow-200">الموعد</span>
+                  </div>
+                  <p className="text-white text-lg font-semibold">
+                    بعد صلاة العشاء مباشرة
+                  </p>
+                </div>
+                
+                <div className="bg-white/10 rounded-xl p-4">
+                  <div className="flex items-center justify-center gap-2 mb-2">
+                    <svg className="w-5 h-5 text-yellow-300" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                    </svg>
+                    <span className="font-bold text-yellow-200">المكان</span>
+                  </div>
+                  <p className="text-white text-lg font-semibold">
+                    المسجد الشرقي - دار المناسبات الشرقيه
+                  </p>
+                </div>
+              </div>
+              
+              <div className="flex justify-center gap-4 mt-6">
+                <div className="bg-yellow-400/20 px-4 py-2 rounded-full">
+                  <span className="text-yellow-200 font-semibold text-sm">🏆 تكريم الفائزين</span>
+                </div>
+                <div className="bg-green-400/20 px-4 py-2 rounded-full">
+                  <span className="text-green-200 font-semibold text-sm">🎁 توزيع الجوائز</span>
+                </div>
+                <div className="bg-blue-400/20 px-4 py-2 rounded-full">
+                  <span className="text-blue-200 font-semibold text-sm">📖 احتفال بحفظة القرآن</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+
         <div className={`bg-gradient-to-r ${successInfo.bgColor} text-white p-6 text-center relative overflow-hidden`}>
           {/* Background decorative elements */}
           <div className="absolute top-2 right-4 opacity-20">
