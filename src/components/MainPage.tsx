@@ -273,6 +273,16 @@ export const MainPage: React.FC<MainPageProps> = ({ onNavigate, isDarkMode = fal
                   <p className={`text-lg ${isDarkMode ? 'text-green-300' : 'text-green-600'}`}>
                     يمكنك الآن البحث عن نتيجتك من خلال صفحة النتائج
                   </p>
+                  <div className={`mt-4 p-4 rounded-xl border ${
+                    isDarkMode 
+                      ? 'bg-blue-900/20 border-blue-600/30 text-blue-200' 
+                      : 'bg-blue-50 border-blue-200 text-blue-700'
+                  }`}>
+                    <h4 className="font-semibold mb-2">💡 نصيحة للاستخدام الأمثل:</h4>
+                    <p className="text-sm">
+                      يُفضل عرض الموقع كموقع مصمم للكمبيوتر أو فتح المتصفح من الكمبيوتر للحصول على أداء أفضل وتجربة مستخدم محسنة
+                    </p>
+                  </div>
                 </div>
                 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
